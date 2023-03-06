@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto:wght@400;500&display=swap');
+@import url(./_normalize.css);
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Delius Unicase', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 80px 0 120px 0;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3 1fr);
+    gap: 30px;
+}
+
+section:last-of-type {
+    margin-bottom: 120px;
+}
+
+.gallery__item img {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__item {
+    position: relative;
+    background-color: #000000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.double-row-cell {
+    grid-column: span 2;
+}
+
+.double-coll-cell {
+    grid-row: span 2;
+}
+
+.double-quarter-cell {
+    grid-area: span 2 / span 2;
+}
+
+.item__author,
+.item__date {
+    margin: 0 20px;
+    line-height: 1;
+}
+
+.item__author {
+    color: #ffffff;
+}
+
+.item__date {
+    color: #E0E0E0;
+}
+
+.info-container,
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+}
+
+.info-container {
+    bottom: 16px;
+}
+
+.buttons-container {
+    display: none;
+    top: 20px;
+}
+
+.icon__like-btn,
+.icon__download-btn {
+   width: 40px;
+   height: 40px;
+    margin: 0 20px;
+    background-position: center;
+    background-color: #e0e0e0;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 8px;
+}
+
+.icon__like-btn {
+    background-image: url(../assets/icon/heart.png);
+}
+
+.icon__download-btn {
+    background-image: url(../assets/icon/download.png);
+}
+
+.gallery__item:hover .buttons-container {
+    display: flex;
+}
+
+.icon__like-btn:hover,
+.icon__download-btn:hover {
+    background-color: #E0E0E0;
+    cursor: url(../assets/icon/hand-point-up.png);
+}
+
+img:hover {
+    opacity: 1;
+    scale: 105%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
